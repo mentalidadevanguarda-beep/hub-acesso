@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os 7 Dias da Mentalidade Vanguarda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">💎</span>
+                    <div class="logo-text">
+                        <h1>Mentalidade Vanguarda</h1>
+                        <p>@mentalidadevanguarda</p>
+                    </div>
+                </div>
+                <button id="pdfButton" class="btn-pdf" title="Baixar protocolo em PDF">
+                    <span class="pdf-icon">📥</span>
+                    <span class="pdf-text">Baixar PDF</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar Section -->
+    <section id="progressSection">
+        <div class="container">
+            <div class="progress-container">
+                <div class="progress-header">
+                    <h2 id="progressTitle">Seu Progresso nos 7 Dias</h2>
+                    <div class="progress-stats">
+                        <span id="progressText">0 de 7 dias completados</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+                <div class="progress-bar-wrapper">
+                    <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+                </div>
+                <div id="motivationalQuote" class="motivational-quote"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Dashboard View -->
+        <section id="dashboardView" class="view active">
+            <div class="container">
+                <div class="welcome-section">
+                    <h2 class="section-title">Transforme Sua Mentalidade Financeira em 7 Dias</h2>
+                    <p class="section-subtitle">Complete cada dia na sequência e desbloqueie sua abundância</p>
+                </div>
+                
+                <div id="daysGrid" class="days-grid"></div>
+
+                <div id="badgesSection" class="badges-section" style="display: none;">
+                    <h3>Suas Conquistas</h3>
+                    <div id="badgesContainer" class="badges-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day Content View -->
+        <section id="dayView" class="view">
+            <div class="container">
+                <div class="day-navigation">
+                    <button id="backToDashboard" class="btn-back">← Voltar ao Dashboard</button>
+                    <div class="day-breadcrumb" id="dayBreadcrumb"></div>
+                </div>
+                
+                <div class="day-content-wrapper">
+                    <div id="dayContent" class="day-content"></div>
+                    
+                    <div class="day-actions">
+                        <button id="completeDayButton" class="btn-complete">✓ Marcar Dia Como Completo</button>
+                        <button id="nextDayButton" class="btn-next" style="display: none;">Próximo Dia →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 @mentalidadevanguarda - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Badge Modal -->
+    <div id="badgeModal" class="modal">
+        <div class="modal-content badge-modal-content">
+            <div class="badge-celebration">
+                <div class="badge-icon" id="badgeIcon"></div>
+                <h2 id="badgeName"></h2>
+                <p id="badgeDescription"></p>
+                <button id="closeBadgeModal" class="btn-primary">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
